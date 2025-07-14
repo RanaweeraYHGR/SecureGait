@@ -88,4 +88,25 @@ SecureGait is an intelligent, automated access control system that uses gait rec
 
 ## 📂 Project Structure
 
-<pre> project/ │ ├── test.py # Raspberry Pi background service ├── model.pkl # Trained Random Forest model ├── /web # Website front-end code │ ├── index.html │ ├── app.js │ └── styles.css ├── /labview # LabVIEW VI files │ └── TriggerHandler.vi ├── /docs # Documentation, diagrams │ └── system-architecture.png └── README.md # Project overview </pre>
+SecureGait/
+│
+├── dashboard/
+│         ├── public/
+│         ├── src/  
+│         ├── package-lock.json
+│         ├── package.json  
+│         └── README.md  
+│
+├── ML_model/
+│         ├── test.py
+│         ├── feed.py
+│         ├── cameraMonitor.py
+│         ├── FeedbackWorker.py
+│         ├── tempController.py
+│         ├── 3foresr.py
+│         ├── 4tst.py
+│         ├── model.pkl
+│         ├── scaler.pkl
+│         └── le.pkl 
+│
+└── README.md
