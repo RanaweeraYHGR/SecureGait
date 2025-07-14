@@ -86,27 +86,4 @@ SecureGait is an intelligent, automated access control system that uses gait rec
 
 ---
 
-## 📂 Project Structure
 
-SecureGait/
-│
-├── dashboard/
-│         ├── public/
-│         ├── src/  
-│         ├── package-lock.json
-│         ├── package.json  
-│         └── README.md  
-│
-├── ML_model/
-│         ├── test.py
-│         ├── feed.py
-│         ├── cameraMonitor.py
-│         ├── FeedbackWorker.py
-│         ├── tempController.py
-│         ├── 3foresr.py
-│         ├── 4tst.py
-│         ├── model.pkl
-│         ├── scaler.pkl
-│         └── le.pkl 
-│
-└── README.md
