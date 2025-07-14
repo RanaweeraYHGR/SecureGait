@@ -1,0 +1,61 @@
+.premium-container {
+  background-color: rgba(0, 80, 0, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 2rem;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.premium-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.premium-card:hover {
+  transform: translateY(-5px);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #90ee90; /* Light Green */
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #90ee90;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #003300;
+}
+
+.nav-logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 1.2rem;
+}
+
+.nav-links a:hover {
+  color: #90ee90;
+}
