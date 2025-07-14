@@ -1,75 +1,90 @@
-<<<<<<< HEAD
-# SecureGait-
-SecureGait is an automated access control system that uses gait recognition to identify authorized individuals. The system integrates a Raspberry Pi, DAQ card, laser-beam sensors, and a machine learning model to enable contactless, secure, and intelligent entry management.
-=======
-# Getting Started with Create React App
+# SecureGait
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+SecureGait is an intelligent, automated access control system that uses gait recognition to identify and authorize people based on their walking patterns. This project combines hardware (Raspberry Pi, DAQ card, laser-beam sensors), software (Python, LabVIEW), machine learning (Random Forest), and cloud integration (Firebase) to deliver a secure, contactless entry system.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- **Real-time Gait-Based Identification**  
+  Recognizes people by analyzing their walking pattern using a trained ML model.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Automated Video Capture**  
+  Raspberry Pi records video on sensor trigger, runs classification automatically.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Machine Learning Classification**  
+  Random Forest model (pickle) predicts authorized vs. unauthorized users.
 
-### `npm test`
+- **Access Control Actions**  
+  - Opens gate for authorized users.
+  - Sounds buzzer for unauthorized users.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Live Database and Web Integration**  
+  - Uses Firebase for real-time updates.
+  - Admin web interface to approve or reject users.
+  - Blocks entry for rejected or unknown users.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## ⚙️ System Architecture
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Sensing and Trigger**  
+   - Laser-beam sensor detects crossing.
+   - DAQ card captures signal.
+   - LabVIEW sends signal to Raspberry Pi.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Video Recording and Processing**  
+   - Raspberry Pi runs `test.py` as a background service.
+   - On trigger, records video for gait analysis.
 
-### `npm run eject`
+3. **Machine Learning Model**  
+   - Pre-trained Random Forest model loaded via pickle.
+   - Predicts if the person is authorized.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. **Access Decision**  
+   - If authorized: Gate opens.
+   - If unauthorized: Buzzer sounds.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5. **Database and Website**  
+   - Firebase stores detection logs.
+   - Website shows live updates.
+   - Admin can approve/reject users in real time.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🛠️ Technologies Used
 
-## Learn More
+- **Hardware**  
+  - Raspberry Pi  
+  - DAQ Card  
+  - Laser-beam sensor
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Software & Programming**  
+  - Python (background service, video recording, ML prediction)
+  - LabVIEW (DAQ integration)
+  - Random Forest ML model (pickle)
+  - Firebase (Realtime Database)
+  - Web front-end (for admin approval)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 📸 Demo / Screenshots
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+*(Add images or GIFs of your hardware setup, web interface, flow diagram, etc. here)*
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🌐 How It Works
 
-### Making a Progressive Web App
+> 1️⃣ Person crosses laser beam →  
+> 2️⃣ DAQ card sends trigger →  
+> 3️⃣ Raspberry Pi records video →  
+> 4️⃣ ML model predicts authorization →  
+> 5️⃣ Gate opens or buzzer sounds →  
+> 6️⃣ Firebase updates logs →  
+> 7️⃣ Admin manages approvals on website
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 📂 Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
->>>>>>> 1c6a5ee (Initialize project using Create React App)
